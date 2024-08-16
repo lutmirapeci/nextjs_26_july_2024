@@ -1,0 +1,580 @@
+/* global styles */
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu mono", monospace;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  color: rgb(45, 45, 45);
+}
+
+h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: rgb(45, 45, 45);
+  font-weight: bolder;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bolder;
+  color: rgb(45, 45, 45);
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  padding: 60px 110px 60px 110px;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mt30 {
+  margin-top: 30px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.mb50 {
+  margin-bottom: 50px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mb60 {
+  margin-bottom: 60px;
+}
+
+.pd10 {
+  padding: 10px 10px 10px 10px;
+}
+
+/*header section */
+
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 20px;
+}
+
+header .header-content .hamburger-menu {
+  display: none;
+}
+
+header .header-content .navigation .navigation-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.navigation .navigation-items .dropdown {
+  position: relative;
+}
+
+li a,
+li.dropdown,
+.dropdown-item {
+  display: inline-block;
+  text-align: center;
+  padding: 7px 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+  min-width: 90px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px 10px;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* intro section */
+
+#intro {
+  background-color: rgb(246, 246, 246);
+  width: 100%;
+}
+
+#intro .intro-description p {
+  font-weight: bolder;
+}
+
+#intro .intro-btn button {
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: rgb(45, 45, 45);
+}
+
+/* boxex section */
+#boxes .boxes-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#boxes .red-box,
+#boxes .purple-box,
+#boxes .cyan-box,
+#boxes .blue-box {
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+  color: white;
+}
+
+.red-box {
+  background-color: rgb(255, 84, 68);
+  width: 20%;
+}
+
+.purple-box {
+  background-color: rgb(170, 45, 182);
+  width: 20%;
+}
+
+.cyan-box {
+  background-color: rgb(30, 194, 164);
+  width: 20%;
+}
+
+.blue-box {
+  background-color: rgb(39, 139, 224);
+  width: 20%;
+}
+
+#boxes p {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+#boxes span {
+  font-size: 12px;
+}
+
+/* demo section */
+
+#demo {
+  background-color: rgb(246, 246, 246);
+}
+
+#demo .options .demo-btn,
+#demo .options .demo-btn1 {
+  padding: 5px 15px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 15px;
+  border: none;
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+  cursor: pointer;
+}
+
+#demo .options .demo-btn {
+  color: #d3d3d3;
+  background-color: rgb(45, 45, 45);
+}
+
+#demo .options .demo-btn1 {
+  color: rgb(48, 47, 47);
+  background-color: #f6f5f7;
+  border-radius: 3px;
+}
+
+#demo .options .demo-btn1:hover {
+  background-color: rgb(45, 45, 45);
+  color: white;
+}
+
+#demo .cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#demo .cards a:hover {
+  .card {
+    border: 2px solid black;
+  }
+}
+
+#demo .cards .card {
+  box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, 0.3);
+}
+
+#demo .cards .card .card-img img {
+  width: 100%;
+}
+
+#demo .cards .card .card-title {
+  padding: 10px;
+  color: #323032;
+  text-transform: uppercase;
+}
+
+/* features section */
+
+#features .features-description p {
+  text-transform: none;
+}
+
+#features .horisontal-line {
+  border-bottom: 3px solid rgb(246, 246, 246);
+  width: 100px;
+}
+
+#features .features-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#features .features-container .feature {
+  display: flex;
+}
+
+#features .features-container .feature .arrow-img {
+  padding: 15px;
+}
+
+/* footer section */
+
+.socials {
+  background-color: #474547;
+  padding: 40px;
+}
+
+.socials h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.socials ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socials a {
+  color: white;
+}
+
+.socials i {
+  font-size: 1.5em;
+}
+
+.socials a:hover {
+  color: #323032;
+  transition: background-color 0.3s ease;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .networks {
+  background-color: #464646;
+}
+
+footer .networks .networks-title h3 {
+  color: white;
+}
+
+footer .networks .networks-icons a i {
+  color: white;
+  margin-right: 10px;
+}
+
+footer .networks .networks-icons a:hover i {
+  color: black;
+}
+
+footer .networks {
+  color: white;
+  background-color: #464646;
+}
+
+footer .copyrights {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: auto;
+}
+
+footer .copyrights p {
+  font-size: 12px;
+  text-transform: none;
+}
+
+/* media query for mobile screens*/
+
+@media (max-width: 425px) {
+  .wrapper {
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* header */
+
+  header .header-content .hamburger-menu {
+    display: block;
+    font-size: 40px;
+  }
+
+  header .header-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  /* intro */
+
+  #intro {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  /* boxes */
+
+  #boxes .boxes-container {
+    flex-direction: column;
+  }
+
+  .boxes-container > div {
+    margin: 20px 0;
+  }
+
+  .red-box {
+    width: 50%;
+  }
+
+  .purple-box {
+    width: 50%;
+  }
+
+  .cyan-box {
+    width: 50%;
+  }
+
+  .blue-box {
+    width: 50%;
+  }
+
+  /* demo */
+
+  #demo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  #demo .options {
+    padding-left: 20px;
+  }
+
+  #demo .options .demo-btn1:last-child {
+    margin-left: 100px;
+  }
+
+  #demo .cards a {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  /* features */
+
+  #features .flex .fetaures-title h1 {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #features .flex .features-description {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #features .features-column:last-child {
+    display: none;
+  }
+
+  #features .horisontal-line {
+    margin-top: 10px;
+  }
+
+  #features .features-container {
+    margin-top: 10px;
+  }
+
+  /* footer */
+  footer .networks {
+    padding: 15px 10px 15px 10px;
+  }
+
+  footer .copyrights p {
+    font-size: 7px;
+  }
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Global Styles for Dark Mode */
+body.dark-mode h1 {
+  color: #f5f5f5;
+}
+
+body.dark-mode h3 {
+  color: #e0e0e0;
+}
+
+body.dark-mode p,
+body.dark-mode a {
+  color: #cfcfcf;
+}
+
+body.dark-mode a:hover {
+  color: #fff;
+}
+
+/* Header Styles for Dark Mode */
+body.dark-mode header {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode header a {
+  color: #fff;
+}
+
+body.dark-mode header .dropdown-content {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+body.dark-mode header .dropdown-content a:hover {
+  background-color: #555;
+}
+
+/* Intro Section for Dark Mode */
+body.dark-mode #intro {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark-mode #intro .intro-btn button {
+  background-color: #333;
+}
+
+/* Boxes Section for Dark Mode */
+body.dark-mode #boxes .red-box {
+  background-color: #a83232;
+}
+
+body.dark-mode #boxes .purple-box {
+  background-color: #803a9b;
+}
+
+body.dark-mode #boxes .cyan-box {
+  background-color: #1e7f68;
+}
+
+body.dark-mode #boxes .blue-box {
+  background-color: #255f9e;
+}
+
+/* Demo Section for Dark Mode */
+body.dark-mode #demo {
+  background-color: #252525;
+}
+
+body.dark-mode #demo .options .demo-btn {
+  background-color: #444;
+  color: #ccc;
+}
+
+body.dark-mode #demo .options .demo-btn1 {
+  background-color: #3a3a3a;
+  color: #ddd;
+}
+
+body.dark-mode #demo .cards .card {
+  background-color: #333;
+  color: #ddd;
+}
+
+/* Footer Section for Dark Mode */
+body.dark-mode footer .networks {
+  background-color: #2b2b2b;
+}
+
+body.dark-mode footer .networks .networks-title h3 {
+  color: #f5f5f5;
+}
+
+body.dark-mode footer .networks .networks-icons a i {
+  color: #bbb;
+}
+
+body.dark-mode footer .copyrights {
+  background-color: #1a1a1a;
+  color: #bbb;
+}
