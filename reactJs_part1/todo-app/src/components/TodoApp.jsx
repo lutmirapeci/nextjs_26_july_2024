@@ -23,7 +23,7 @@ const TodoApp = () => {
 
   return (
     <div>
-      <h1>Todo Manager</h1>
+      <h1>Todo App</h1>
       <input
         type="text"
         value={newTodo}
