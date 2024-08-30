@@ -1,40 +1,40 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 
 function TodoApp() {
-  const [tasks, setTasks] = useState([]);
-  const [inputValue, setInputValue] = useState('');
+  const [taskList, updateTaskList] = useState([]);
+  const [currentTask, setCurrentTask] = useState('');
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
+  const handleInputUpdate = (event) => {
+    setCurrentTask(event.target.value);
   };
 
-  const handleAddTask = () => {
-    if (inputValue.trim() !== '') {
-      setTasks([...tasks, inputValue]);
-      setInputValue('');
+  const addTaskToList = () => {
+    if (currentTask.trim() !== '') {
+      updateTaskList([...taskList, currentTask]);
+      setCurrentTask('');
     }
   };
 
-  const handleDeleteTask = (index) => {
-    const newTasks = tasks.filter((_, i) => i !== index);
-    setTasks(newTasks);
+  const removeTaskFromList = (taskIndex) => {
+    const updatedTaskList = taskList.filter((_, index) => index !== taskIndex);
+    updateTaskList(updatedTaskList);
   };
 
   return (
     <div>
-      <h1>To-Do List</h1>
+      <h1>Task Manager</h1>
       <input
         type="text"
-        value={inputValue}
-        onChange={handleInputChange}
-        placeholder="Add a new task"
+        value={currentTask}
+        onChange={handleInputUpdate}
+        placeholder="Enter a new task"
       />
-      <button onClick={handleAddTask}>Add Task</button>
+      <button onClick={addTaskToList}>Add Task</button>
       <ul>
-        {tasks.map((task, index) => (
+        {taskList.map((task, index) => (
           <li key={index}>
             {task}
-            <button onClick={() => handleDeleteTask(index)}>Delete</button>
+            <button onClick={() => removeTaskFromList(index)}>Delete</button>
           </li>
         ))}
       </ul>
