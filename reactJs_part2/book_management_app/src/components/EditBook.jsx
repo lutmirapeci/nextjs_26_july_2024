@@ -5,7 +5,7 @@ import BookForm from './BookForm';
 function EditBook({ books, setBooks }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const book = books.find(b => b.id === parseInt(id, 10)); // Added radix parameter for parseInt
+  const book = books.find(b => b.id === parseInt(id, 10)); 
 
   const handleSubmit = (updatedBook) => {
     setBooks(books.map(b => (b.id === parseInt(id, 10) ? updatedBook : b)));

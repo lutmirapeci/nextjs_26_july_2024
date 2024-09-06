@@ -7,9 +7,9 @@ function AddBook({ books, setBooks }) {
   const navigate = useNavigate();
 
   const handleSubmit = (book) => {
-    setBooks([...books, { ...book, id: books.length + 1 }]);
+    setBooks([...books, { ...book, id: Date.now() }]); 
     navigate('/');
-  };
+  };  
 
   return (
     <div>

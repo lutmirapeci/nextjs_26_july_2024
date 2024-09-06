@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 function BookList({ books, setBooks }) {
   const deleteBook = (id) => {
     if (window.confirm('Are you sure you want to delete this book?')) {
-      setBooks(books.filter(book => book.id !== id));
+      const updatedBooks = books.filter(book => book.id !== id);
+      setBooks(updatedBooks);
     }
-  };
+  };  
 
   return (
     <div>
@@ -28,7 +29,6 @@ function BookList({ books, setBooks }) {
   );
 }
 
-// Add prop types for validation
 BookList.propTypes = {
   books: PropTypes.array.isRequired,
   setBooks: PropTypes.func.isRequired,
