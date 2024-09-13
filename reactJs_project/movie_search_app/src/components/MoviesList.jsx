@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 // components
-import Grid from '@mui/material/Grid';
+import Grid from '@mui/material/Grid2';
 // custom components
 import MovieDetails from './MovieDetails';
 
