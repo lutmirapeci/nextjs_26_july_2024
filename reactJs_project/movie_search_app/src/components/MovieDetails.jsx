@@ -1,92 +1,90 @@
 import PropTypes from 'prop-types';
+// components
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 const MovieDetails = ({ record }) => {
-    return (
-        <div className="ui teal placeholder segment" style={{ marginLeft: "70px", marginTop: "10px", gridGap: "0 5px" }}>
-            <img
-                alt={record.show?.name}
-                className='ui medium rounded image'
-                src={record.show?.image?.original}
-                style={{ width: "350px" }}
-            />
-            <div className="ui teal segment">
-                <h4 className="ui header" style={{ color: "teal" }}>
-                    <center>{record.show?.name}</center>
-                </h4>
-                
-                
-                    <table className="ui celled table" style={{ fontSize: 10, wordWrap: "break-word" }}>
-                        <tbody>
-                            <tr>
-                                <td style={{ color: "teal" }}>
-                                    <strong>Country</strong><br />
-                                    {record.show?.network?.country?.code}
-                                </td>
-                                <td style={{ color: "teal" }}>
-                                    <strong>Premiere</strong><br />
-                                    {record.show?.premiered}
-                                </td>
-                                <td style={{ color: "teal" }}>
-                                    <strong>Time</strong><br />
-                                    {record.show?.schedule?.time}
-                                </td>
-                                <td style={{ color: "teal" }}>
-                                    <strong>Genre</strong><br />
-                                    {record.show?.genres[0]}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style={{ color: "teal" }}>
-                                    <strong>Network</strong><br />
-                                    {record.show?.network?.name}
-                                </td>
-                                <td style={{ color: "teal" }}>
-                                    <strong>Ratings</strong><br />
-                                    {record.show?.rating?.average}
-                                </td>
-                                <td style={{ color: "teal" }}>
-                                    <strong>Season</strong><br />
-                                    {record.season}
-                                </td>
-                                <td style={{ color: "teal" }}>
-                                    <strong>Episode</strong><br />
-                                    {record.number}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-           
-            </div>
-        </div>
-    );
+  return (
+    <Card sx={{ maxWidth: 345, height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <CardMedia
+        component="img"
+        alt={record.show?.name}
+        height="400"
+        image={record.show?.image?.original || 'https://via.placeholder.com/350x400'}
+      />
+      <CardContent sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" gutterBottom align="center">
+          {record.show?.name}
+        </Typography>
+
+        <Box>
+          <Grid container spacing={2}>
+            <Grid item xs={6}>
+              <Typography variant="body2" color="text.secondary">
+                <strong>Country:</strong> {record.show?.network?.country?.code || 'N/A'}
+              </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="body2" color="text.secondary">
+                <strong>Premiere:</strong> {record.show?.premiered || 'N/A'}
+              </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="body2" color="text.secondary">
+                <strong>Time:</strong> {record.show?.schedule?.time || 'N/A'}
+              </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="body2" color="text.secondary">
+                <strong>Genre:</strong> {record.show?.genres[0] || 'N/A'}
+              </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="body2" color="text.secondary">
+                <strong>Network:</strong> {record.show?.network?.name || 'N/A'}
+              </Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography variant="body2" color="text.secondary">
+                <strong>Ratings:</strong> {record.show?.rating?.average || 'N/A'}
+              </Typography>
+            </Grid>
+          </Grid>
+        </Box>
+      </CardContent>
+    </Card>
+  );
 };
 
 MovieDetails.propTypes = {
-    record: PropTypes.shape({
-        show: PropTypes.shape({
-            name: PropTypes.string,
-            image: PropTypes.shape({
-                original: PropTypes.string
-            }),
-            summary: PropTypes.string,
-            network: PropTypes.shape({
-                country: PropTypes.shape({
-                    code: PropTypes.string
-                }),
-                name: PropTypes.string
-            }),
-            premiered: PropTypes.string,
-            schedule: PropTypes.shape({
-                time: PropTypes.string
-            }),
-            genres: PropTypes.arrayOf(PropTypes.string),
-            rating: PropTypes.shape({
-                average: PropTypes.number
-            })
+  record: PropTypes.shape({
+    show: PropTypes.shape({
+      name: PropTypes.string,
+      image: PropTypes.shape({
+        original: PropTypes.string,
+      }),
+      network: PropTypes.shape({
+        country: PropTypes.shape({
+          code: PropTypes.string,
         }),
-        season: PropTypes.number,
-        number: PropTypes.number
-    }).isRequired,
+        name: PropTypes.string,
+      }),
+      premiered: PropTypes.string,
+      schedule: PropTypes.shape({
+        time: PropTypes.string,
+      }),
+      genres: PropTypes.arrayOf(PropTypes.string),
+      rating: PropTypes.shape({
+        average: PropTypes.number,
+      }),
+    }),
+    season: PropTypes.number,
+    number: PropTypes.number,
+  }).isRequired,
 };
 
 export default MovieDetails;
