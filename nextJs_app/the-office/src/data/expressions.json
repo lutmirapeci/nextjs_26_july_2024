@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "quote": "I'm not superstitious, but I am a little stitious.",
+      "character": "Michael Scott",
+      "videoUrl": "https://www.youtube.com/embed/39uoolmtjSA?si=RwFOlL9Xr6CflRs_"
+    },
+    {
+      "id": 2,
+      "quote": "I DECLARE BANKRUPTCY!",
+      "character": "Michael Scott",
+      "videoUrl": "https://www.youtube.com/embed/C-m3RtoguAQ?si=d0v09Ge_un-Tffdo"
+    },
+    {
+      "id": 3,
+      "quote": "Identity theft is not a joke, Jim! Millions of families suffer every year!",
+      "character": "Dwight Schrute",
+      "videoUrl": "https://www.youtube.com/embed/WaaANll8h18?si=0vaGlSop5EEQIYBw"
+    },
+    {
+      "id": 4,
+      "quote": "Bears, beets, Battlestar Galactica.",
+      "character": "Jim Halpert (as Dwight)",
+      "videoUrl": "https://www.youtube.com/embed/WaaANll8h18?si=0vaGlSop5EEQIYBw"
+    },
+    {
+      "id": 5,
+      "quote": "Sometimes I'll start a sentence and I don't even know where it's going. I just hope I find it along the way.",
+      "character": "Michael Scott",
+      "videoUrl": "https://www.youtube.com/embed/QT07vyf0HQM?si=WBdTJgx6uV3_C_S8"
+    },
+    {
+      "id": 6,
+      "quote": "I am Beyoncé, always.",
+      "character": "Michael Scott",
+      "videoUrl": "https://www.youtube.com/embed/5VBuOD6W7mo?si=P4zoo-BcyHWEuzuB"
+    },
+    {
+      "id": 7,
+      "quote": "Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me.",
+      "character": "Michael Scott",
+      "videoUrl": "https://www.youtube.com/embed/cz4rqaQrsI0?si=l1ycO--blyAH185j"
+    },
+    {
+      "id": 8,
+      "quote": "I'm running away from my responsibilities. And it feels good.",
+      "character": "Michael Scott",
+      "videoUrl": "https://www.youtube.com/embed/ZQQAdPZfCvo?si=6H48muPoC8tn-S9d"
+    },
+    {
+      "id": 9,
+      "quote": "I am ready to get hurt again.",
+      "character": "Michael Scott",
+      "videoUrl": "https://www.youtube.com/embed/9BiaYBvcMAI?si=eCvHmQEKB3xB3AKE"
+    }
+]
